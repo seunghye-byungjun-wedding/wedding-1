@@ -1,6 +1,6 @@
 
 function copyToClipboard(elementId) {
-
+  alert(elementId);
   // 글을 쓸 수 있는 란을 만든다.
   var aux = document.createElement("input");
 
