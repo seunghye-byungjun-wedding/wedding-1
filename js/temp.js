@@ -1,13 +1,26 @@
 
-function copyToClipboard() {
-  var copyText2 = document.getElementById("myInput").innerHTML;
-  var copyText = document.getElementById("myInput").innerText;
-  alert(copyText2);
-  alert(copyText);
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
-  document.execCommand("copy");
-  alert("Copied the text: " + copyText.value);
+function copyToClipboard(id) {
+    var text = document.getElementById(id).innerText;
+    var elem = document.createElement("textarea");
+    document.body.appendChild(elem);
+    elem.value = text;
+    elem.select();
+    document.execCommand("copy");
+    document.body.removeChild(elem);
+  
+  alert("copyText : " + text);
+  
+  
+  
+  
+ // var copyText2 = document.getElementById("myInput").innerHTML;
+  //var copyText = document.getElementById("myInput").innerText;
+ // alert(copyText2);
+ // alert(copyText);
+ // copyText.select();
+ // copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+ // document.execCommand("copy");
+ // alert("Copied the text: " + copyText.value);
 
   // 글을 쓸 수 있는 란을 만든다.
   //var aux = document.createElement("input");
