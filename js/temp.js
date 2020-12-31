@@ -1,5 +1,5 @@
 
-function copyToClipboard(elementId) {
+function copyToClipboard() {
   var copyText = document.getElementById("myInput");
   alert(copyText);
   copyText.select();
