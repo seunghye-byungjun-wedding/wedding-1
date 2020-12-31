@@ -1,9 +1,17 @@
 
 function copyToClipboard(elementId) {
-  alert ("Hello");
-  alert (elementId);
+  //alert (elementId);
+  var copyText = elementId;
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  document.execCommand("Copy");
+  alert('복사되었습니다, 감사합니다.');
+
+
+출처: https://ddorang-d.tistory.com/117 [도라미도라미]
+  
   // 글을 쓸 수 있는 란을 만든다.
-  var aux = document.createElement("input");
+  //var aux = document.createElement("input");
 
   // 지정된 요소의 값을 할당 한다.
   //aux.setAttribute("value", document.getElementById(elementId).innerHTML);
