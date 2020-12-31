@@ -1,6 +1,7 @@
 
 function copyToClipboard(id) {
-    var text = document.getElementById(id).innerText;
+    //var text = document.getElementById(id).innerText;
+    var text = id;
     var elem = document.createElement("textarea");
     document.body.appendChild(elem);
     elem.value = text;
