@@ -1,12 +1,11 @@
 
 function copyToClipboard(elementId) {
-  //alert (elementId);
-  var copyText = elementId;
+  var copyText = document.getElementById("myInput");
   copyText.select();
-  copyText.setSelectionRange(0, 99999);
-  document.execCommand("Copy");
-  alert('복사되었습니다, 감사합니다.');
-  
+  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+  document.execCommand("copy");
+  alert("Copied the text: " + copyText.value);
+
   // 글을 쓸 수 있는 란을 만든다.
   //var aux = document.createElement("input");
 
