@@ -1,6 +1,6 @@
 
 function copyToClipboard() {
-  var copyText = document.getElementById("myInput");
+  var copyText = document.getElementById("myInput").innerText;
   alert(copyText);
   copyText.select();
   copyText.setSelectionRange(0, 99999); /*For mobile devices*/
