@@ -62,7 +62,7 @@ function copyToClipboard(id) {
     document.execCommand("copy");
     document.body.removeChild(elem);
   
-  alert("copyText : " + text);
+  //alert("copyText : " + text);
   
   
   
